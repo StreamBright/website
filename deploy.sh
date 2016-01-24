@@ -12,7 +12,7 @@ aws s3 sync . s3://www.streambrightdata.com/ \
 --include '*.json' \
 --include '*.svg' \
 --include '*.ttf' \
---include '*.ttf' \
+--include '*.txt' \
 --include '*.woff' \
 --include '*.xml' \
 --acl public-read \
