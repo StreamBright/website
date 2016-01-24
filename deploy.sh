@@ -15,6 +15,6 @@ aws s3 sync . s3://www.streambrightdata.com/ \
 --include '*.ttf' \
 --include '*.woff' \
 --include '*.xml' \
---recursive \
 --acl public-read \
+--output json \
 --region us-east-1
