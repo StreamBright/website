@@ -1,4 +1,5 @@
-aws s3 sync . s3://www.streambrightdata.com/ \
+aws --profile istvan s3 sync . s3://www.streambrightdata.com/ \
+--cache-control 86400 \
 --exclude '*' \
 --include '*.html' \
 --include '*.css' \
