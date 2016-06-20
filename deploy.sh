@@ -1,5 +1,5 @@
 aws --profile istvan s3 sync . s3://www.streambrightdata.com/ \
---cache-control 86400 \
+--cache-control 604800 \
 --exclude '*' \
 --include '*.html' \
 --include '*.css' \
