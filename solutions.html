@@ -1,0 +1,110 @@
+---
+layout: default
+title: 'Solutions :: StreamBright Data - On-Demand Data Expertise'
+hero:
+    title: On-Demand Big Data Expertise
+    text: Use your data better, easier and more cost effectively
+    background: images/hero3.jpg
+    link_href: #fh5co-main
+    link_text: Learn more
+---
+<section class="bottomborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 fh5co-lead-wrap">
+                <h2 class="fh5co-uppercase-heading-sm text-center">Why should you care about your data infrastructure</h2>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h3">Critical insights from data to grow your business</h2>
+                <h4>Companies use data infrastructure to power business analytics. The quality of the infrastructure determines what kind of insights you are able to get and how fast you get them. With the right setup you can analyze connected data from different sources to perform optimization of your processes. This will lead to higher conversion rates, more revenue and cost savings.</h4>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h3">Delivery of data-enabled product features</h2>
+                <h4>Frequently, data infrastructure is used to power product features. It is critical to have a highly available, effective and efficient architecture to keep your customers happy. The speed of the system is key and an up-to-date architecture can perform significantly better than an outdated one. This could make or break your business in a competitive environment.</h4>
+            </div>
+        </div>
+        <div class="fh5co-spacer fh5co-spacer-sm"></div>
+    </div>
+</section>
+
+<section class="bottomborder" id="what">
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-12 fh5co-lead-wrap">
+                <h2 class="fh5co-uppercase-heading-sm text-center">What we offer</h2>
+            </div>
+
+            <div class="col-md-12">
+                {% assign sorted_offers = site.offers | sort: "order" %}
+                <div id="fh5co-tab-feature-center" class="fh5co-tab text-center">
+                    <ul class="resp-tabs-list hor_1">
+                        {% for offer in sorted_offers %}
+                            <li><i class="fh5co-tab-menu-icon {{ offer.icon }}"></i>{{ offer.title }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="resp-tabs-container hor_1">
+                        {% for offer in sorted_offers %}
+                        <div>
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <h2 class="h3">{{ offer.title }}</h2>
+                                </div>
+                                <div class="col-md-8 col-md-offset-2">
+                                    <h4>{{ offer.content | remove: '<p>' | remove: '</p>'  }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="fh5co-spacer fh5co-spacer-md"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 fh5co-lead-wrap">
+                <h2 class="fh5co-uppercase-heading-sm text-center">How can we make sure you reach your goals</h2>
+                <div class="fh5co-spacer fh5co-spacer-sm"></div>
+                <div class="col-md-8 col-md-offset-2 clearfix fh5co-header">
+                    <h4 class="h5 fh5co-heading-sub">As a completely technology independent consultancy we will help you implement the best data infrastructure using either open-source or commercial software – depending on your specific needs. We have a deep knowledge of several solutions at every stage of the data pipeline. There are few easily recognizable layers in data pipelines - we have experience with all of them.</h4>
+                </div>
+            </div>
+            
+            <div class="col-md-12">
+                <div id="fh5co-tab-feature-vertical" class="fh5co-tab">
+                    {% assign sorted_solutions = site.solutions | sort: "order" %}
+                    <ul class="resp-tabs-list hor_1">
+                        {% for solution in sorted_solutions %}
+                            <li><i class="fh5co-tab-menu-icon "></i>{{ forloop.index }}. {{ solution.title }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="resp-tabs-container hor_1">
+                        {% for solution in sorted_solutions %}
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2 class="h3">{{ solution.title }}</h2>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h4>{{ solution.content | remove: '<p>' | remove: '</p>' }}</h4>
+                                        {% for tag in solution.tags %}
+                                            <span class="label label-default">{{ tag }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="fh5co-spacer fh5co-spacer-md"></div>
+        </div>
+    </div>
+</section>
