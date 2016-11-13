@@ -1,0 +1,21 @@
+- country: Florida, USA
+  address1: 2015 S Tuttle Ave
+  address2: Sarasota, 34239
+  phone: +1 (941) 315 8512
+  phone_href: tel:9413158512
+  skype: Adam
+  skype_href: skype:adam.jermann
+- country: Hungary
+  address1: Szent István körút
+  address2: Budapest, 1137
+  phone: +36 20 435 2604
+  phone_href: tel:+36204352604
+  skype: Adam
+  skype_href: skype:adam.jermann
+- country: Netherlands
+  address1: High Tech Campus Eindhoven
+  address2: Eindhoven, 5656 AE
+  phone: +31 647 081 521
+  phone_href: tel:+31647081521
+  skype: Istvan
+  skype_href: skype:daslexia

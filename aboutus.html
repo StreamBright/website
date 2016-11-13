@@ -1,0 +1,101 @@
+---
+layout: default
+title: 'About Us :: StreamBright Data - On-Demand Data Expertise'
+hero:
+    title: On-Demand Big Data Expertise
+    text: Years of experience with data infrastructures
+    background: images/hero2.jpg
+    link_href: ./contact.html
+    link_text: Contact us
+---
+<section class="bottomborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 fh5co-lead-wrap">
+                <h2 class="fh5co-uppercase-heading-sm text-center">Why Should You Choose Us</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2 clearfix fh5co-header">
+                <h4 class="h5 fh5co-heading-sub">At StreamBright we work on empowering companies to use their data to its full potential and accelerate adoption
+                    of big data technologies. Our team has many years of experience with data architectures and distributed
+                    systems. We are eager to answer your data related questions and design, build or optimize your data pipeline
+                    to maximize the results and minimize the costs.</h4>
+            </div>
+        </div>
+        <div class="fh5co-spacer fh5co-spacer-sm"></div>
+    </div>
+</section>
+<section id="fh5co-feature">
+    <div class="container">
+        <div class="row fh5co-feature-2">
+            <div class="col-md-12 col-md-offset-0">
+                <h2 class="fh5co-uppercase-heading-sm text-center">Our Team</h2>
+                <div class="fh5co-spacer fh5co-spacer-sm"></div>
+
+                {% assign sorted_team = site.team | sort: "order" %}
+                {% for member in sorted_team %}
+                    <div class="col-md-6 col-sm-6 fh5co-feature-item text-center">
+                        <span class="aboutus-team-pic"><img src="{{ member.image }}" alt="{{ member.name }}" class="img-res img-circle"></span>
+                        <h2 class="text-center fh5co-feature-title h4 text-uppercase">{{ member.name }}</h2>
+                        <h2 class="text-center fh5co-feature-title h4 text-uppercase">{{ member.position }}</h2>
+                        <p class="text-center fh5co-feature-description">{{ member.content | remove: '<p>' | remove: '</p>' }}</p>
+                        <ul class="list-unstyled aboutus-social">
+                            <li><a href="https://www.linkedin.com/in/{{ member.linkedin }}" target="_blank"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="mailto:{{ member.email }}"><i class="ti-email"></i></a></li>
+                            {% if member.twitter %}
+                                <li><a href="https://twitter.com/@{{ member.twitter }}" target="_blank"><i class="ti-twitter-alt"></i></a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    {% unless forloop.last %}<hr class="visible-xs">{% endunless %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="topborder" id="partners">
+    <div class="container">
+        <div class="row fh5co-feature-3">
+
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+
+            <div class="col-md-12">
+                <h2 class="fh5co-uppercase-heading-sm text-center">Partners</h2>
+                <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+
+                    {% assign sorted_partners = site.partners | sort: "order" %}
+                    {% assign is_partners_even = site.partners.length | modulo:2 == 1 %}
+
+                    {% for partner in sorted_partners %}
+
+                        {% if forloop.last and is_partners_even %}
+                            <div class="col-md-3"></div>
+                        {% endif %}
+
+                        <div class="col-md-6 fh5co-feature-item" style="text-align: center;">
+                            <img src="{{ partner.logo }}" class="partner-logo" alt="{{ partner.name }}">
+                            <br>
+                            <div style="text-align: left;">
+                                {{ partner.content }}
+                                {% for tag in partner.tags %}
+                                    <span class="label label-default">{{ tag }}</span>
+                                {% endfor %}
+                                <br><br>
+                                <a href="{{ partner.website }}">{{ partner.website }}</a>
+                            </div>
+                        </div>
+
+                        {% unless forloop.last %}<hr class="visible-xs">{% endunless %}
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-spacer fh5co-spacer-sm"></div>
+    </div>
+</section>
