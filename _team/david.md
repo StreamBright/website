@@ -1,11 +1,9 @@
 ---
-name: David Beck
-image: ./img/david_beck.jpg
-position: Technical Advisor
-linkedin: davidbeckhungary
+name: David Prokaj
+image: ./img/david_prokaj.jpg
+position: Senior Frontend Developer
+linkedin: david-prokaj-a8319282
 email: david@streambrightdata.com
-order: 3
+order: 1
 ---
-David worked on distributed storage solutions and high scale, critical systems for multinational
-financial institutions. He has an interest in software quality and performance critical software.
-Also, works together on his project - Scalesmall - with StreamBright.
+David has almost 10 years experience developing JS heavy UIs for financial companies and startups. Hi rides an awesome fixie to work and rocks with ReactJS.

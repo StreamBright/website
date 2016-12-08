@@ -5,7 +5,7 @@ position: CEO
 linkedin: adamjermann
 email: adam@streambrightdata.com
 twitter: AdamJermann
-order: 2
+order: 5
 ---
 Adam has a business and finance background, experience with startup companies and multinational advisory
 firms. As founding CEO, his in charge of every business realted aspects of StreamBright (business
