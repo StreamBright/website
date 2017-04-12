@@ -33,6 +33,10 @@ hero:
 
                 {% assign sorted_team = site.team | sort: "order" %}
                 {% for member in sorted_team %}
+                    {% capture current %}{% cycle 'odd', 'even' %}{% endcapture %}
+                    {% if current == 'even' %}
+                      <div class="row">
+                    {% endif %}
                     <div class="col-md-6 col-sm-6 fh5co-feature-item text-center">
                         <span class="aboutus-team-pic"><img src="{{ member.image }}" alt="{{ member.name }}" class="img-res img-circle"></span>
                         <h2 class="text-center fh5co-feature-title h4 text-uppercase">{{ member.name }}</h2>
@@ -46,6 +50,9 @@ hero:
                             {% endif %}
                         </ul>
                     </div>
+                    {% if current == 'even' %}
+                      </div>
+                    {% endif %}
                     {% unless forloop.last %}<hr class="visible-xs">{% endunless %}
                 {% endfor %}
             </div>
